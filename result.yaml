@@ -1,0 +1,14 @@
+#@ load("@ytt:data", "data")
+
+options:
+  - name: check
+    value: #@ data.values.check
+
+  - name: testText
+    value: #@ data.values.testText
+
+  - name: testText2
+    value: #@ data.values.testText2
+
+  - name: numberField
+    value: #@ data.values.numberField

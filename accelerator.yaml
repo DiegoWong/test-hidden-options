@@ -1,0 +1,34 @@
+accelerator:
+  displayName: Test hidden options
+  description: A accelerator to test hidden options
+  iconUrl: https://i.ibb.co/gD1bHVr/pngegg.png
+
+  options:
+    - name: check
+      label: "Show txt"
+      inputType: checkbox
+      dataType: boolean
+      defaultValue: true
+    - name: testText
+      label: "temp text"
+      inputType: text
+      dataType: string
+      defaultValue: "a test text"
+      dependsOn:
+        name: check
+        value: true
+    - name: testText2
+      label: "temp text 2"
+      inputType: text
+      dataType: string
+      dependsOn:
+        name: check
+        value: true
+    - name: numberField
+      dataType: number
+      dependsOn:
+        name: check
+        value: true
+
+engine:
+  type: YTT
